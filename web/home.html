@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Darksouls</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
+    <script src="lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="javasript/animation.js" type="text/javascript"></script>
+    <script src="javasript/home.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+<div id="background">
+    <img src="images/ds3.jpg"/>
+</div>
+<div id="illustration">
+    <div id="tabs">
+        <ul>
+            <li id="weapons" class="active">武器</li>
+            <li id="shields">盾牌</li>
+            <li id="magic">法术</li>
+            <li id="ring">戒指</li>
+            <li id="contract">契约</li>
+        </ul>
+    </div>
+    <div id="main">
+        <div class="list_bar">
+            <ul>
+                <li id="dagger">匕首</li>
+                <li id="straight sword">直剑</li>
+                <li id="greatsword">大剑</li>
+                <li id="ultra greatsword">特大剑</li>
+                <li id="curved sword">曲剑</li>
+                <li id="curved greatsword">大曲剑</li>
+                <li id="katana">太刀</li>
+                <li id="thrusting sword">刺剑</li>
+                <li id="axe">小斧</li>
+                <li id="greataxe">大斧</li>
+                <li id="hammer">小锤</li>
+                <li id="greathammer">大锤</li>
+                <li id="spear and pike">枪</li>
+                <li id="halberd">戟</li>
+                <li id="reper">镰刀</li>
+                <li id="whip">鞭子</li>
+                <li id="fist and claw">拳套&爪</li>
+                <li id="bow">弓</li>
+                <li id="crossbow">弩</li>
+                <li id="staves">法杖</li>
+                <li id="others">触媒</li>
+            </ul>
+        </div>
+        <div id="items">
+        </div>
+    </div>
+</div>
+
+<div id="front">
+    <canvas id="canvas"></canvas>
+</div>
+
+<div id="detail" style="display: none">
+    <div id="basic_attr">
+        <div id="item_pic">
+            <img/>
+            <div id="name"></div>
+        </div>
+        <div id="type_skill">
+            <table>
+                <tbody>
+                <tr>
+                    <td><img src="images/icon/attr/weapon_type-icon.jpg"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/damage_type-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/icon/attr/skill-icon.jpg"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/icon_fp_cost.png"></td>
+                    <td class="data"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="label">装备属性</div>
+        <div id="dmg_def">
+            <table>
+                <tbody>
+                <tr class="row1">
+                    <td><img src="images/icon/attr/icon-wp_physicalAttack.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/physical_defense-shield-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row2">
+                    <td><img src="images/icon/attr/icon-magicbonus.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/magic_defense-shield-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row1">
+                    <td><img src="images/icon/attr/icon-firebonus.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/fire_defense-shield-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row2">
+                    <td><img src="images/icon/attr/icon-lightningbonus.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/lightning_defense-shield-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row1">
+                    <td><img src="images/icon/attr/icon-darkbonus.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/dark_defense-shield-icon.jpg"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row2">
+                    <td><img src="images/icon/attr/icon-wp_critical.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/icon-wp_stability.png"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row1">
+                    <td><img src="images/icon/attr/icon_weight.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/icon-durabilitiy.png"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr class="row2">
+                    <td><img src="images/icon/attr/icon-wp_bleed.png"></td>
+                    <td class="data"></td>
+                    <td><img src="images/icon/attr/icon-wp_poisonbld.png"></td>
+                    <td class="data"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="label">装备要求与补正</div>
+        <div id="bonus">
+            <table>
+                <tbody>
+                <tr>
+                    <td><img src="images/icon/attr/icon-strength_22.png"></td>
+                    <td><img src="images/icon/attr/icon-dexterity_22.png"></td>
+                    <td><img src="images/icon/attr/icon-intelligence_22.png"></td>
+                    <td><img src="images/icon/attr/icon-faith_22.png"></td>
+                </tr>
+                <tr>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                </tr>
+                <tr>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="text_info">
+        <div id="introductions">
+            <div class="title">介绍</div>
+            <div class="context">
+            </div>
+        </div>
+        <div id="tips">
+            <div class="title">技巧</div>
+            <div class="context">
+            </div>
+        </div>
+        <div id="from">
+            <div class="title">入手方式</div>
+            <div class="context">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

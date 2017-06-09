@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DarkSouls">
+    <output-path>$PROJECT_DIR$/out/artifacts/DarkSouls</output-path>
+    <root id="archive" name="DarkSouls.war">
+      <element id="javaee-facet-resources" facet="DarkSouls/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="DarkSouls" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
